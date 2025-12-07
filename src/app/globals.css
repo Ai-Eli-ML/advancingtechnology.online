@@ -1,26 +1,84 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* AdvancingTechnology Brand Colors - Blue/Gold Palette */
+  --primary: #3A4AB2;
+  --primary-dark: #2A3A8F;
+  --primary-light: #4A5AC2;
+  --primary-foreground: #ffffff;
+  --accent: #D6B349;
+  --accent-dark: #B8983A;
+  --accent-light: #E5C965;
+  --accent-foreground: #0A0A0A;
+
+  /* Background System */
+  --background: #030014;
+  --background-secondary: #0a0a1a;
+  --foreground: #FFFAEC;
+  --foreground-secondary: #E5E5E5;
+
+  /* Legacy purple/blue/pink for gradients */
+  --accent-purple: #8b5cf6;
+  --accent-blue: #3b82f6;
+  --accent-pink: #ec4899;
+
+  --card: #0a0a1a;
+  --card-foreground: #ffffff;
+  --border: #1a1a2e;
+  --muted: #1a1a2e;
+  --muted-foreground: #94A3B8;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.light {
+  --background: #FFFAEC;
+  --background-secondary: #F9F6E8;
+  --foreground: #0A0A0A;
+  --foreground-secondary: #475569;
+  --card: #ffffff;
+  --border: #E5E7EB;
+  --muted: #F3F4F6;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Gradient mesh background */
+.gradient-mesh {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(10, 10, 26, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
 }

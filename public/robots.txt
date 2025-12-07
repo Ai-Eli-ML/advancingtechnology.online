@@ -1,0 +1,10 @@
+# robots.txt for advancingtechnology.online
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://advancingtechnology.online/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
