@@ -4,15 +4,49 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'About Us | AdvancingTechnology',
-  description: 'Learn about AdvancingTechnology - a production AI-powered services company specializing in therapeutic AI, autonomous agents, and enterprise solutions.',
+  title: 'My Story | AdvancingTechnology',
+  description: 'From Uber driver to AI entrepreneur - the honest journey of building AI products in public.',
   openGraph: {
-    title: 'About Us | AdvancingTechnology',
-    description: 'Production AI-powered services company building the future with intelligent solutions',
+    title: 'My Story | AdvancingTechnology',
+    description: 'From Uber driver to AI entrepreneur - building in public since 2023',
     url: 'https://advancingtechnology.online/about',
     type: 'website',
   },
 };
+
+const timeline = [
+  {
+    year: '2022',
+    title: 'The Beginning',
+    description: 'Started driving Uber while learning to code. Spent nights studying AI, watching tutorials, and building small projects.',
+    highlight: 'First line of Python',
+  },
+  {
+    year: '2023',
+    title: 'First AI Projects',
+    description: 'Built my first AI tools. Started using ChatGPT obsessively. Had 1,000+ conversations learning everything I could.',
+    highlight: '8,446 ChatGPT conversations',
+  },
+  {
+    year: '2024',
+    title: 'Going All In',
+    description: 'Quit Uber to focus full-time on AI. Built AJ (my personal AI assistant), started Life-Coach-Ai, and landed first clients.',
+    highlight: 'Full-time AI builder',
+  },
+  {
+    year: '2025',
+    title: 'Building in Public',
+    description: 'Launched 3 production AI products. Built a 30-agent system. Started sharing everything I learn with 5,000+ subscribers.',
+    highlight: '$1B exit goal',
+  },
+];
+
+const stats = [
+  { value: '2+', label: 'Years Building' },
+  { value: '8,446', label: 'ChatGPT Convos' },
+  { value: '30', label: 'AI Agents Built' },
+  { value: '3', label: 'Products Shipped' },
+];
 
 export default function AboutPage() {
   return (
@@ -20,275 +54,205 @@ export default function AboutPage() {
       <div className="gradient-mesh" />
       <Navigation />
 
-      <main className="relative z-10 pt-16">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Building the Future with
-              <br />
-              <span className="gradient-text">AI</span>
+      <main className="relative z-10 pt-24 pb-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Hero */}
+          <div className="text-center mb-16">
+            <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] flex items-center justify-center text-4xl">
+              👨‍💻
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Hey, I&apos;m <span className="gradient-text">Sxilent</span>
             </h1>
-            <p className="text-2xl text-gray-400 mb-12">
-              Production-ready AI solutions that create real-world impact
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              From Uber driver to AI entrepreneur. Building in public, sharing everything I learn.
             </p>
           </div>
-        </section>
 
-        {/* Mission */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="glass rounded-2xl p-8 md:p-12 mb-8">
-              <h2 className="text-4xl font-bold mb-6">Our Mission</h2>
-              <p className="text-xl text-gray-400 mb-4">
-                At AdvancingTechnology, we believe artificial intelligence should serve humanity&apos;s greatest needs.
-                We build production-ready AI systems that address real-world challenges, from mental health crises
-                to business automation.
-              </p>
-              <p className="text-xl text-gray-400">
-                Our focus is on vulnerable populations and high-impact applications where technology can make
-                a measurable difference in people&apos;s lives. We combine cutting-edge AI research with pragmatic
-                engineering to deliver solutions that work in production environments.
-              </p>
-            </div>
-          </div>
-        </section>
+          {/* The Story */}
+          <section className="mb-16">
+            <div className="glass rounded-3xl p-8 md:p-12">
+              <h2 className="text-2xl font-bold mb-6">The Honest Story</h2>
 
-        {/* What We Do */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-8 text-center">
-              What We <span className="gradient-text">Build</span>
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              <div className="glass rounded-2xl p-8 hover:border-[var(--accent-purple)] transition-all">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-2xl font-bold mb-3">Therapeutic AI Systems</h3>
-                <p className="text-gray-400">
-                  Production-ready AI companions for vulnerable populations including seniors, abuse survivors,
-                  and people on therapy waitlists. Crisis intervention with HIPAA-level security.
+              <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
+                <p>
+                  Two years ago, I was driving Uber to pay rent. I had a laptop, a dream, and absolutely
+                  no idea what I was doing. I knew one thing: AI was going to change everything, and I
+                  wanted to be part of it.
                 </p>
-              </div>
 
-              <div className="glass rounded-2xl p-8 hover:border-[var(--accent-blue)] transition-all">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-2xl font-bold mb-3">Multi-Agent Systems</h3>
-                <p className="text-gray-400">
-                  Sophisticated agent orchestration frameworks for complex workflows. Intelligent coordination,
-                  autonomous decision-making, and scalable architectures.
+                <p>
+                  So I started learning. Every night after driving, I&apos;d come home and study. Python.
+                  Machine learning. APIs. I had over <strong className="text-white">8,446 conversations with ChatGPT</strong> just
+                  trying to understand how this stuff worked.
                 </p>
-              </div>
 
-              <div className="glass rounded-2xl p-8 hover:border-[var(--accent-pink)] transition-all">
-                <div className="text-4xl mb-4">🎯</div>
-                <h3 className="text-2xl font-bold mb-3">Enterprise Software</h3>
-                <p className="text-gray-400">
-                  Full-stack applications with modern tech stacks. Next.js, React, TypeScript, real-time features,
-                  and cloud infrastructure built for scale.
+                <p>
+                  I built crappy projects. Lots of them. Most failed. But each failure taught me something.
+                  Slowly, I got better. Then I got good enough to build things that actually worked.
                 </p>
-              </div>
 
-              <div className="glass rounded-2xl p-8 hover:border-[var(--accent-purple)] transition-all">
-                <div className="text-4xl mb-4">🔬</div>
-                <h3 className="text-2xl font-bold mb-3">AI Automation</h3>
-                <p className="text-gray-400">
-                  Document processing, workflow automation, and intelligent analysis systems that reduce
-                  operational costs while improving accuracy.
+                <p>
+                  Today, I run AdvancingTechnology. I&apos;ve built a <strong className="text-white">30-agent AI system</strong> for
+                  therapeutic applications. I have <strong className="text-white">3 products in production</strong>. And I&apos;m
+                  working toward a <strong className="text-white">$1 billion exit</strong>.
+                </p>
+
+                <p>
+                  Sounds crazy? Maybe. But I&apos;ve learned that audacious goals attract audacious results.
+                </p>
+
+                <p className="text-[var(--accent-purple)]">
+                  This site exists to share everything I&apos;ve learned along the way. The wins. The losses.
+                  The tools that actually work. No gatekeeping, no BS.
                 </p>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Our Approach */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="glass rounded-2xl p-8 md:p-12 mb-8">
-              <h2 className="text-4xl font-bold mb-6">Our Approach</h2>
-
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-bold mb-3 text-[var(--accent-purple)]">Production-First Mindset</h3>
-                  <p className="text-lg text-gray-400">
-                    We don&apos;t build prototypes. Every project is designed for production deployment from day one,
-                    with comprehensive testing, security measures, and scalability built in. Our Life-Coach-Ai
-                    platform has 149/149 tests passing with 100% coverage on critical safety features.
-                  </p>
+          {/* Timeline */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold mb-8 text-center">The Journey</h2>
+            <div className="space-y-6">
+              {timeline.map((item, index) => (
+                <div key={item.year} className="flex gap-6">
+                  <div className="flex flex-col items-center">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] flex items-center justify-center font-bold text-sm">
+                      {item.year}
+                    </div>
+                    {index < timeline.length - 1 && (
+                      <div className="w-0.5 h-full bg-[var(--border)] mt-2" />
+                    )}
+                  </div>
+                  <div className="glass rounded-xl p-6 flex-1">
+                    <div className="flex items-start justify-between mb-2">
+                      <h3 className="font-bold text-lg">{item.title}</h3>
+                      <span className="text-xs px-3 py-1 bg-[var(--accent-purple)]/20 text-[var(--accent-purple)] rounded-full">
+                        {item.highlight}
+                      </span>
+                    </div>
+                    <p className="text-gray-400">{item.description}</p>
+                  </div>
                 </div>
-
-                <div>
-                  <h3 className="text-2xl font-bold mb-3 text-[var(--accent-blue)]">Autonomous Development</h3>
-                  <p className="text-lg text-gray-400">
-                    We leverage autonomous AI agents for 2-3x faster development cycles. Our 30-agent architecture
-                    enables rapid iteration while maintaining quality. This allows us to deliver enterprise-grade
-                    solutions in startup timeframes.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-2xl font-bold mb-3 text-[var(--accent-pink)]">Human-Centered Design</h3>
-                  <p className="text-lg text-gray-400">
-                    Technology serves people, not the other way around. Our therapeutic AI systems prioritize
-                    accessibility for seniors, crisis intervention for vulnerable populations, and ethical
-                    considerations at every step. We build solutions that respect human dignity.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-2xl font-bold mb-3 text-[var(--accent-purple)]">Transparent Operations</h3>
-                  <p className="text-lg text-gray-400">
-                    We believe in radical transparency. Our development process is tracked in real-time through
-                    our personal dashboard. Clients can see progress, test results, and system health at any time.
-                    No black boxes, no surprises.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Technology Stack */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-8 text-center">
-              Our <span className="gradient-text">Tech Stack</span>
-            </h2>
-
-            <div className="glass rounded-2xl p-8 md:p-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-bold mb-4">Frontend</h3>
-                  <ul className="space-y-2 text-gray-400">
-                    <li>Next.js 15 with App Router</li>
-                    <li>React 19 with Server Components</li>
-                    <li>TypeScript Strict Mode</li>
-                    <li>Tailwind CSS v4</li>
-                    <li>shadcn/ui Components</li>
-                  </ul>
+          {/* Stats */}
+          <section className="mb-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {stats.map((stat) => (
+                <div key={stat.label} className="glass rounded-xl p-6 text-center">
+                  <div className="text-3xl font-bold gradient-text mb-1">{stat.value}</div>
+                  <div className="text-gray-400 text-sm">{stat.label}</div>
                 </div>
-
-                <div>
-                  <h3 className="text-xl font-bold mb-4">AI/ML</h3>
-                  <ul className="space-y-2 text-gray-400">
-                    <li>OpenAI GPT-4 & Realtime API</li>
-                    <li>Claude (Anthropic)</li>
-                    <li>NVIDIA NeMo & Riva</li>
-                    <li>RAG with Vector Databases</li>
-                    <li>Multi-Agent Orchestration</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-bold mb-4">Backend</h3>
-                  <ul className="space-y-2 text-gray-400">
-                    <li>Supabase (Database, Auth, RLS)</li>
-                    <li>Python FastAPI</li>
-                    <li>Node.js 20 Runtime</li>
-                    <li>Serverless Functions</li>
-                    <li>WebSocket Real-time</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-bold mb-4">Infrastructure</h3>
-                  <ul className="space-y-2 text-gray-400">
-                    <li>Vercel Deployment</li>
-                    <li>Docker Containerization</li>
-                    <li>NVIDIA GPU Acceleration</li>
-                    <li>PostgreSQL Databases</li>
-                    <li>Cloud Storage (S3-compatible)</li>
-                  </ul>
-                </div>
-              </div>
+              ))}
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Company Stats */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="glass rounded-2xl p-8 text-center">
-                <div className="text-4xl font-bold gradient-text mb-2">11+</div>
-                <div className="text-gray-400">Production Projects</div>
-              </div>
-              <div className="glass rounded-2xl p-8 text-center">
-                <div className="text-4xl font-bold gradient-text mb-2">30+</div>
-                <div className="text-gray-400">AI Agents Deployed</div>
-              </div>
-              <div className="glass rounded-2xl p-8 text-center">
-                <div className="text-4xl font-bold gradient-text mb-2">57K+</div>
-                <div className="text-gray-400">Lines of Production Code</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Values */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-8 text-center">
-              Our <span className="gradient-text">Values</span>
-            </h2>
-
+          {/* What I Believe */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold mb-8 text-center">What I Believe</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="glass rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-3">Impact Over Hype</h3>
-                <p className="text-gray-400">
-                  We build solutions that work in production and serve real needs. No vaporware, no demos
-                  that never ship. Every project is designed for immediate deployment.
+              <div className="glass rounded-xl p-6">
+                <h3 className="font-bold text-lg mb-2 text-[var(--accent-purple)]">Build in Public</h3>
+                <p className="text-gray-400 text-sm">
+                  Share your journey. The wins AND the losses. Authenticity builds trust, and trust builds business.
                 </p>
               </div>
-
-              <div className="glass rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-3">Ethics First</h3>
-                <p className="text-gray-400">
-                  AI systems must respect human dignity and privacy. HIPAA-level security for therapeutic data,
-                  crisis intervention protocols, and transparent operations are non-negotiable.
+              <div className="glass rounded-xl p-6">
+                <h3 className="font-bold text-lg mb-2 text-[var(--accent-blue)]">Give First</h3>
+                <p className="text-gray-400 text-sm">
+                  Provide massive value before asking for anything. This site is free because helping others helps everyone.
                 </p>
               </div>
-
-              <div className="glass rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-3">Quality Excellence</h3>
-                <p className="text-gray-400">
-                  149/149 tests passing. 100% coverage on critical systems. TypeScript strict mode. These aren&apos;t
-                  aspirations - they&apos;re requirements for every project we ship.
+              <div className="glass rounded-xl p-6">
+                <h3 className="font-bold text-lg mb-2 text-[var(--accent-pink)]">AI is Leverage</h3>
+                <p className="text-gray-400 text-sm">
+                  One person with AI can do the work of ten. Use it. The playing field has never been more level.
                 </p>
               </div>
-
-              <div className="glass rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-3">Open Innovation</h3>
-                <p className="text-gray-400">
-                  We share knowledge, contribute to open source, and believe in lifting the entire industry.
-                  Competition makes everyone better.
+              <div className="glass rounded-xl p-6">
+                <h3 className="font-bold text-lg mb-2 text-[var(--accent)]">Audacious Goals</h3>
+                <p className="text-gray-400 text-sm">
+                  $1B exit sounds crazy until it doesn&apos;t. Dream big, execute daily, iterate constantly.
                 </p>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* CTA */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="glass rounded-2xl p-12">
-              <h2 className="text-4xl font-bold mb-6">
-                Ready to Build the Future
-                <br />
-                <span className="gradient-text">Together?</span>
-              </h2>
-              <p className="text-xl text-gray-400 mb-8">
-                Let&apos;s create AI solutions that make a real difference
-              </p>
+          {/* Current Projects */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold mb-8 text-center">What I&apos;m Building</h2>
+            <div className="space-y-4">
+              <div className="glass rounded-xl p-6">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="font-bold text-lg">Life-Coach-Ai</h3>
+                  <span className="text-xs px-3 py-1 bg-green-500/20 text-green-400 rounded-full">75% Complete</span>
+                </div>
+                <p className="text-gray-400 text-sm mb-3">
+                  AI therapeutic companion for vulnerable populations. 30-agent architecture with crisis intervention.
+                </p>
+                <a href="https://lifecoach.advancingtechnology.online" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-purple)] text-sm hover:underline">
+                  View Live →
+                </a>
+              </div>
+
+              <div className="glass rounded-xl p-6">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="font-bold text-lg">AJ-AGI</h3>
+                  <span className="text-xs px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full">In Development</span>
+                </div>
+                <p className="text-gray-400 text-sm">
+                  My personal AI assistant with voice, memory, and business intelligence integration.
+                </p>
+              </div>
+
+              <div className="glass rounded-xl p-6">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="font-bold text-lg">Personal Dashboard</h3>
+                  <span className="text-xs px-3 py-1 bg-green-500/20 text-green-400 rounded-full">92% Complete</span>
+                </div>
+                <p className="text-gray-400 text-sm">
+                  Multi-tenant project management platform with real-time collaboration and AI insights.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Connect */}
+          <section className="glass rounded-3xl p-8 md:p-12 text-center">
+            <h2 className="text-2xl font-bold mb-4">Let&apos;s Connect</h2>
+            <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+              I read every email and try to respond to everyone. Whether you want to collaborate,
+              have questions, or just want to say hi.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="/#contact"
-                className="inline-block px-8 py-4 bg-gradient-to-r from-[var(--accent-purple)] to-[var(--accent-blue)] rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                href="/newsletter"
+                className="px-6 py-3 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-lg font-semibold hover:opacity-90 transition-all"
               >
-                Start a Conversation
+                Join Newsletter
               </Link>
+              <a
+                href="https://twitter.com/advtech_ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 border border-[var(--border)] rounded-lg font-semibold hover:border-[var(--accent-purple)] transition-all"
+              >
+                Follow on X
+              </a>
+              <a
+                href="https://elijahbrown.info"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 border border-[var(--border)] rounded-lg font-semibold hover:border-[var(--accent-purple)] transition-all"
+              >
+                Book a Call
+              </a>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
 
         <Footer />
       </main>

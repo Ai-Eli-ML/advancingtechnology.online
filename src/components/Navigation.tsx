@@ -22,10 +22,10 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { href: '/#services', label: 'Services' },
-    { href: '/#projects', label: 'Projects' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/tools', label: 'Free Tools' },
+    { href: '/resources', label: 'Resources' },
     { href: '/about', label: 'About' },
-    { href: '/#contact', label: 'Contact' },
   ];
 
   return (

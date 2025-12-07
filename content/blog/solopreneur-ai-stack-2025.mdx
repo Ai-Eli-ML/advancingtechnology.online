@@ -1,0 +1,165 @@
+---
+title: "My Complete AI Tech Stack as a Solopreneur (2025)"
+date: "2025-11-28"
+description: "Every tool, API, and framework I use to run a one-person AI business. No fluff, just what actually works."
+category: "AI Tutorials"
+tags: ["tech-stack", "tools", "solopreneur", "productivity"]
+featured: false
+author: "Sxilent"
+---
+
+People always ask what tools I use. Here's the complete, unfiltered list—everything that powers my one-person AI business in 2025.
+
+## The Philosophy
+
+Before the list: my stack is optimized for **speed to ship** and **low operational overhead**. I'm one person. I can't manage complex infrastructure. Every tool needs to earn its place.
+
+## Development
+
+### Framework: Next.js 15 + React 19
+Why: Server components, app router, incredible DX. I build everything in Next.js now.
+
+```bash
+npx create-next-app@latest --typescript
+```
+
+### Language: TypeScript (Strict Mode)
+Why: Catches bugs before they ship. Strict mode is non-negotiable.
+
+### Styling: Tailwind CSS v4
+Why: Utility-first CSS is faster for solo devs. No context switching between files.
+
+### Components: shadcn/ui
+Why: Copy-paste components I can customize. No vendor lock-in.
+
+## AI/ML
+
+### Primary LLM: Claude (Anthropic)
+Why: Best reasoning, longest context, most reliable. I use Claude for:
+- Complex code generation
+- Document analysis
+- Multi-step reasoning tasks
+
+### Secondary LLM: OpenAI GPT-4
+Why: Better for certain creative tasks, embeddings, and the Realtime API for voice.
+
+### Local Models: Ollama + Qwen2.5-14B
+Why: Free inference for non-critical tasks. Runs on my RTX 5090.
+
+```bash
+ollama run qwen2.5:14b
+```
+
+### Voice: NVIDIA Riva + NeMo
+Why: On-device voice processing. Low latency, high quality, GPU-accelerated.
+
+### Embeddings: OpenAI text-embedding-3-large
+Why: Best quality-to-cost ratio for RAG applications.
+
+## Database & Backend
+
+### Database: Supabase (PostgreSQL)
+Why: Postgres with auth, RLS, realtime, and edge functions built in. One service, many features.
+
+### Auth: Supabase Auth
+Why: Already included. Social logins, magic links, everything I need.
+
+### File Storage: Supabase Storage
+Why: S3-compatible, already integrated.
+
+### Edge Functions: Supabase Edge Functions (Deno)
+Why: Serverless functions near the database.
+
+## Infrastructure
+
+### Hosting: Vercel
+Why: Best-in-class Next.js deployment. Preview deployments for every PR.
+
+### Domain/DNS: Cloudflare
+Why: Free, fast, great DX. All my domains use Cloudflare.
+
+### Monitoring: Vercel Analytics + Custom Logging
+Why: Built-in analytics, custom logging to Supabase for debugging.
+
+## Development Tools
+
+### Editor: VS Code + Claude Code CLI
+Why: Claude Code is my pair programmer. Game changer.
+
+### Git: GitHub
+Why: Industry standard. GitHub Actions for CI/CD.
+
+### Package Manager: pnpm
+Why: Faster than npm, better monorepo support.
+
+### Testing: Vitest
+Why: Fast, Vite-native, great DX.
+
+## AI Development Workflow
+
+### Prompt Management: Local MDX Files
+Why: Version controlled, easy to iterate. No SaaS lock-in.
+
+### Agent Framework: Custom (based on LangChain patterns)
+Why: LangChain is great for learning, but I've extracted what I need into a lighter custom implementation.
+
+### RAG: Custom with pgvector
+Why: Vector search directly in Postgres. No additional service.
+
+## Business Operations
+
+### Email: Resend
+Why: Developer-first email API. Simple pricing.
+
+### Payments: Stripe
+Why: Industry standard. Great docs.
+
+### Analytics: Plausible
+Why: Privacy-focused, lightweight. No cookie banners needed.
+
+### Project Management: Personal Dashboard (my own tool)
+Why: I built exactly what I need.
+
+## The Stack Summary
+
+| Category | Tool | Monthly Cost |
+|----------|------|--------------|
+| Framework | Next.js 15 | Free |
+| Database | Supabase Pro | $25 |
+| Hosting | Vercel Pro | $20 |
+| AI APIs | Claude + OpenAI | ~$100 |
+| Email | Resend | $20 |
+| Domains | Cloudflare | Free |
+| Payments | Stripe | 2.9% + $0.30 |
+| **Total** | | **~$165/month** |
+
+## What I Tried and Dropped
+
+- **Firebase**: Too much vendor lock-in
+- **AWS**: Too complex for solo dev
+- **Prisma**: Supabase's auto-generated types are good enough
+- **Redux**: React 19's built-in state is sufficient
+- **Contentful**: MDX files are simpler for my needs
+
+## The Principle
+
+Every tool should:
+1. Save me time
+2. Be reliable (99.9%+ uptime)
+3. Have escape hatches (data portability)
+4. Cost less than the time it saves
+
+If a tool doesn't meet all four criteria, I don't use it.
+
+## Your Stack Doesn't Need to Be Fancy
+
+I know devs who ship successful products with:
+- Plain JavaScript
+- SQLite
+- A $5 VPS
+
+The best stack is the one you can ship with. Don't over-engineer.
+
+---
+
+*Building your stack? [Ask me anything](/about)—happy to help.*
