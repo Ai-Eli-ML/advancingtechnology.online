@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/((?!maintenance|_next|api|favicon).*)",
+      "destination": "/maintenance",
+      "permanent": false
+    }
+  ]
+}
